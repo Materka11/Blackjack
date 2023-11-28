@@ -1,74 +1,63 @@
 #include <iostream>
+#include <string>
 
-enum class CardRank
-{
-  RANK_2,
-  RANK_3,
-  RANK_4,
-  RANK_5,
-  RANK_6,
-  RANK_7,
-  RANK_8,
-  RANK_9,
-  RANK_10,
-  RANK_JACK,
-  RANK_QUEEN,
-  RANK_KING,
-  RANK_ACE,
-
-};
-
-enum class CardSuit
-{
-  SUIT_CLUB,
-  SUIT_DIAMOND,
-  SUIT_HEART,
-  SUIT_SPADE,
-};
+using namespace std;
 
 class Card
 {
-public:
-  CardRank rank;
-  CardSuit suit;
+private:
+  char cardRank;
+  string cardSuit;
 
-  int getValue() const
+public:
+  Card() : cardRank(' '), cardSuit("") {}
+  Card(char rank, string suit) : cardRank(rank), cardSuit(suit) {}
+
+  int getValue(int points) const
   {
-    switch (rank)
+    if (cardRank >= '2' && cardRank <= '9')
     {
-    case CardRank::RANK_2:
-      return 2;
-    case CardRank::RANK_3:
-      return 3;
-    case CardRank::RANK_4:
-      return 4;
-    case CardRank::RANK_5:
-      return 5;
-    case CardRank::RANK_6:
-      return 6;
-    case CardRank::RANK_7:
-      return 7;
-    case CardRank::RANK_8:
-      return 8;
-    case CardRank::RANK_9:
-      return 9;
-    case CardRank::RANK_10:
-    case CardRank::RANK_JACK:
-    case CardRank::RANK_QUEEN:
-    case CardRank::RANK_KING:
+      return cardRank - '0';
+    }
+    if (cardRank == 'T' || cardRank == 'J' || cardRank == 'Q' || cardRank == 'K')
+    {
       return 10;
-    case CardRank::RANK_ACE:
+    }
+    if (cardRank == 'A' && points + 11 <= 21)
+    {
       return 11;
-    default:
-      return 0;
+    }
+    else
+    {
+      return 1;
     }
   }
 };
 
 class Deck
 {
+private:
+  char cardsRank[13] = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+  string cardsSuit[4] = {"Hearts", "Diamonds", "Spades", "Clubs"};
+
+  int CARDS_RANK_LENGHT = sizeof(cardsRank) / sizeof(cardsRank[0]);
+  int CARDS_SUIT_LENGHT = sizeof(cardsSuit) / sizeof(cardsSuit[0]);
+
+  Card deck[52];
+
 public:
-  const int AMONT_OF_CARDS = 52;
+  Deck()
+  {
+    int l = 0;
+    for (int i = 0; i < CARDS_SUIT_LENGHT; i++)
+    {
+      for (int j = 0; j < CARDS_RANK_LENGHT; j++)
+      {
+        deck[l] = Card(cardsRank[j], cardsSuit[i]);
+        l++;
+      }
+    }
+  }
 
   void shuffle()
   {
