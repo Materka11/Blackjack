@@ -1,5 +1,9 @@
 ﻿  Blackjack.cpp
 C:\Users\Home\Desktop\Zadania\blackjack\Blackjack.cpp(110,13): warning C4566: znak przedstawiony przez nazwę zawierającą znaki uniwersalne "\u0107" nie może być przedstawiony w bieżącej stronie kodowej (1252)
+  Card.cpp
+  Deck.cpp
+  Hand.cpp
   main.cpp
   Generowanie kodu...
-  Blackjack1.vcxproj -> C:\Users\Home\Desktop\Zadania\Blackjack1\x64\Debug\Blackjack1.exe
+C:\Users\Home\Desktop\Zadania\blackjack\Card.cpp(29): warning C4715: "Card::getValue”: niewszystkie ścieżki kodu zwracają wartość
+  Blackjack1.vcxproj -> C:\Users\Home\Desktop\Zadania\blackjack\x64\Debug\Blackjack1.exe
