@@ -1,0 +1,2 @@
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.vcxproj.AssemblyReference.cache
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe
