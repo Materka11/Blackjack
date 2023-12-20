@@ -118,10 +118,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Blackjack.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="Hand.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Blackjack.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="Deck.h" />
+    <ClInclude Include="Hand.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
