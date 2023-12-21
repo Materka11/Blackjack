@@ -1,2 +1,4 @@
 C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.vcxproj.AssemblyReference.cache
 C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.MyForm.resources
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.vcxproj.GenerateResource.cache

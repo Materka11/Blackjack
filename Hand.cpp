@@ -1,5 +1,6 @@
 ﻿#include "Hand.h"
 #include <iostream>
+#include <utility>
 
 using namespace std;
 
@@ -26,16 +27,14 @@ int Hand::getPoints() {
 	for (const auto& card : cards) {
 		totalPoints += card.getValue(totalPoints);
 	}
+
 	return totalPoints;
-	
 }
 
-void Hand::getCards(string name) {
-	cout << "Karty w rece: " + name << endl << endl;
+pair<char, string> Hand::getCards() {
 	for (const auto& card : cards) {
-		cout << "Karta: " << card.getRank() << " " << card.getSuit() << endl;
+		return make_pair(card.getRank(), card.getSuit());
 	}
-	cout << endl;
 }
 
 void Hand::resetHand() {

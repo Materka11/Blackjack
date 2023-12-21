@@ -1,9 +1,5 @@
-﻿  Blackjack.cpp
-C:\Users\Home\Desktop\Zadania\Blackjack\Blackjack.cpp(110,13): warning C4566: znak przedstawiony przez nazwę zawierającą znaki uniwersalne "\u0107" nie może być przedstawiony w bieżącej stronie kodowej (1252)
-  Card.cpp
-  Deck.cpp
-  Hand.cpp
+﻿  MyForm.cpp
+  main.cpp
   Generowanie kodu...
-C:\Users\Home\Desktop\Zadania\Blackjack\Card.cpp(29): warning C4715: "Card::getValue”: niewszystkie ścieżki kodu zwracają wartość
   Blackjack.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
   Blackjack.vcxproj -> C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe

@@ -5,6 +5,7 @@
 #include "Deck.h"
 #include <vector>
 #include <string>
+#include <utility>
 
 using namespace std;
 
@@ -18,7 +19,7 @@ public:
   Hand(Deck deck, bool isDealer);
   void addCard();
   int getPoints();
-  void getCards(string name);
+  pair<char, string> getCards();
   void resetHand();
 };
 

@@ -6,8 +6,8 @@ using namespace std;
 Blackjack::Blackjack() : deck(), playerHand(deck, false), dealerHand(deck, true) {}
 
 void Blackjack::startGame() {
-    playerHand.getCards("gracza");
-    dealerHand.getCards("krupiera");
+    playerHand.getCards();
+    dealerHand.getCards();
 
     const int playerPoints = playerHand.getPoints();
 
@@ -32,8 +32,8 @@ void Blackjack::resetGame() {
 
 void Blackjack::hit() {
 	playerHand.addCard();
-    playerHand.getCards("gracza");
-    dealerHand.getCards("krupiera");
+    playerHand.getCards();
+    dealerHand.getCards();
 
     const int playerPoints = playerHand.getPoints();
 
@@ -58,8 +58,8 @@ void Blackjack::stand() {
     else {
         while (dealerHand.getPoints() <= playerPoints && dealerHand.getPoints() <= 21) {
             dealerHand.addCard();
-            playerHand.getCards("gracza");
-            dealerHand.getCards("krupiera");
+            playerHand.getCards();
+            dealerHand.getCards();
         }
 
         const int finalDealerPoints = dealerHand.getPoints();
