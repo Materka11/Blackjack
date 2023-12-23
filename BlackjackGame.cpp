@@ -1,25 +1,24 @@
-﻿#include "Blackjack.h"
+﻿#include "BlackjackGame.h"
 #include <iostream>
 
-using namespace std;
 
-Blackjack::Blackjack() : deck(), playerHand(deck, false), dealerHand(deck, true) {}
+BlackjackGame::BlackjackGame() : deck(), playerHand(deck, false), dealerHand(deck, true) {}
 
-void Blackjack::startGame() {
+void BlackjackGame::startGame() {
     playerHand.getCards();
     dealerHand.getCards();
 
-    const int playerPoints = playerHand.getPoints();
+    /*const int playerPoints = playerHand.getPoints();
 
     if (playerPoints == 21) {
         cout << "Gracz wygral" << endl;
     }
     else {
         getChoice();
-    }
+    }*/
 }
 
-void Blackjack::resetGame() {
+void BlackjackGame::resetGame() {
     deck.shuffle();
     playerHand.resetHand();
     dealerHand.resetHand();
@@ -30,7 +29,7 @@ void Blackjack::resetGame() {
 }
 
 
-void Blackjack::hit() {
+void BlackjackGame::hit() {
 	playerHand.addCard();
     playerHand.getCards();
     dealerHand.getCards();
@@ -38,22 +37,22 @@ void Blackjack::hit() {
     const int playerPoints = playerHand.getPoints();
 
     if (playerPoints == 21) {
-       cout << "Gracz wygral" << endl;
+       std::cout << "Gracz wygral" << std::endl;
     }
     else if (playerPoints > 21) {
-       cout << "Krupier wygral" << endl;
+       std::cout << "Krupier wygral" << std::endl;
     }
     else {
         getChoice();
     }
 }
 
-void Blackjack::stand() {
+void BlackjackGame::stand() {
     const int initialDealerPoints = dealerHand.getPoints();
     const int playerPoints = playerHand.getPoints();
 
     if (initialDealerPoints > playerPoints && initialDealerPoints <= 21) {
-        cout << "Krupier wygral" << endl;
+        std::cout << "Krupier wygral" << std::endl;
     }
     else {
         while (dealerHand.getPoints() <= playerPoints && dealerHand.getPoints() <= 21) {
@@ -65,29 +64,29 @@ void Blackjack::stand() {
         const int finalDealerPoints = dealerHand.getPoints();
 
         if (finalDealerPoints > 21) {
-            cout << "Gracz wygral" << endl;
+            std::cout << "Gracz wygral" << std::endl;
         }
         else if (finalDealerPoints > playerPoints) {
-            cout << "Krupier wygral" << endl;
+            std::cout << "Krupier wygral" << std::endl;
         }
         else if (finalDealerPoints == playerPoints) {
-            cout << "Remis" << endl;
+            std::cout << "Remis" << std::endl;
         }
     }
 }
 
-void Blackjack::surrender() {
-	cout << "Krupier wygral" << endl;
+void BlackjackGame::surrender() {
+	std::cout << "Krupier wygral" << std::endl;
 }
 
-void Blackjack::getChoice() {
-    string choice;
+void BlackjackGame::getChoice() {
+    std::string choice;
 
-    cout << "Wpisz jedna w ponizszych komend:" << endl;
-    cout << "hit" << endl;
-    cout << "stand" << endl;
-    cout << "reset" << endl << endl;
-    cin >> choice;
+    std::cout << "Wpisz jedna w ponizszych komend:" << std::endl;
+    std::cout << "hit" << std::endl;
+    std::cout << "stand" << std::endl;
+    std::cout << "reset" << std::endl << std::endl;
+    std::cin >> choice;
 
     if (choice == "hit") {
         hit();
@@ -99,16 +98,16 @@ void Blackjack::getChoice() {
         resetGame();
     }
     else {
-        cout << "Nie poprawa komenda. Prosze sprobowac ponowne" << endl;
+        std::cout << "Nie poprawa komenda. Prosze sprobowac ponowne" << std::endl;
         getChoice();
     }
 }
 
-void Blackjack::playAgain() {
+void BlackjackGame::playAgain() {
     char choice;
 
-    cout << "Czy chcesz zagrać ponownie? (t/n): " << endl;
-    cin >> choice;
+    std::cout << "Czy chcesz zagrać ponownie? (t/n): " << std::endl;
+    std::cin >> choice;
 
     switch (choice)
     {
@@ -117,11 +116,19 @@ void Blackjack::playAgain() {
         playAgain();
         break;
     case 'n': 
-        cout << "Dziekujemy za gre" << endl;
+        std::cout << "Dziekujemy za gre" << std::endl;
         break;
     default:
-        cout << "Niepoprawna komenda" << endl;
+        std::cout << "Niepoprawna komenda" << std::endl;
         playAgain();
         break;
     }
+}
+
+std::vector<std::pair<char, std::string>> BlackjackGame::getCardsPlayer() {
+    return playerHand.getCards();
+}
+
+std::vector<std::pair<char, std::string>> BlackjackGame::getCardsDealer() {
+    return dealerHand.getCards();
 }

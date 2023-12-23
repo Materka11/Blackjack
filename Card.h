@@ -3,20 +3,18 @@
 
 #include <string>
 
-using namespace std;
-
 class Card
 {
 private:
   char cardRank;
-  string cardSuit;
+  std::string cardSuit;
 
 public:
   Card();
-  Card(char rank, string suit);
+  Card(char rank, std::string suit);
   int getValue(int points) const;
   char getRank() const;
-  string getSuit() const;
+  std::string getSuit() const;
 };
 
 #endif

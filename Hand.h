@@ -7,19 +7,18 @@
 #include <string>
 #include <utility>
 
-using namespace std;
 
 class Hand
 {
 private:
-  vector<Card> cards;
+  std::vector<Card> cards;
   Deck deck;
 
 public:
   Hand(Deck deck, bool isDealer);
   void addCard();
   int getPoints();
-  pair<char, string> getCards();
+  std::vector<std::pair<char, std::string>> getCards();
   void resetHand();
 };
 

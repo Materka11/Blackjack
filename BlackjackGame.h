@@ -1,10 +1,10 @@
-#ifndef BLACKJACK_H
-#define BLACKJACK_H
+#ifndef BLACKJACKGAME_H
+#define BLACKJACKGAME_H
 
 #include "Deck.h"
 #include "Hand.h"
 
-class Blackjack
+class BlackjackGame
 {
 private:
   Deck deck;
@@ -17,9 +17,11 @@ private:
   void resetGame();
 
 public:
-  Blackjack();
+  BlackjackGame();
   void startGame();
   void playAgain();
+  std::vector<std::pair<char, std::string>> getCardsPlayer();
+  std::vector<std::pair<char, std::string>> getCardsDealer();
 };
 
 #endif

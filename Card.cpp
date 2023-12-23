@@ -1,10 +1,8 @@
 #include "Card.h"
 
-using namespace std;
-
 Card::Card() : cardRank(' '), cardSuit("") {}
 
-Card::Card(char rank, string suit) : cardRank(rank), cardSuit(suit) {}
+Card::Card(char rank, std::string suit) : cardRank(rank), cardSuit(suit) {}
 
 int Card::getValue(int points) const {
   if (cardRank >= '2' && cardRank <= '9')
@@ -32,6 +30,6 @@ char Card::getRank() const {
     return cardRank;
 }
 
-string Card::getSuit() const {
+std::string Card::getSuit() const {
     return cardSuit;
 }

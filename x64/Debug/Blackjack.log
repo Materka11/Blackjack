@@ -1,5 +1,11 @@
 ﻿  MyForm.cpp
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(124,62): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „MyForm.cpp”)
+  
   main.cpp
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(124,62): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
   Generowanie kodu...
-  Blackjack.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
+  BlackjackGame.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
   Blackjack.vcxproj -> C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe

@@ -3,7 +3,7 @@
 using namespace Blackjack;
 
 [STAThreadAttribute]
-int main(array < System::String^ >^ args)
+int main(array< System::String^ >^ args)
 {
 	// Enabling Windows XP visual effects before any changes are created
 	Application::EnableVisualStyles();

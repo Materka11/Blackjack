@@ -2,8 +2,6 @@
 #include <iostream>
 #include <utility>
 
-using namespace std;
-
 
 Hand::Hand(Deck deck, bool isDealer) {
 	this->deck = deck;
@@ -31,10 +29,12 @@ int Hand::getPoints() {
 	return totalPoints;
 }
 
-pair<char, string> Hand::getCards() {
+std::vector<std::pair<char, std::string>> Hand::getCards() {
+	std::vector<std::pair<char, std::string>> allCards;
 	for (const auto& card : cards) {
-		return make_pair(card.getRank(), card.getSuit());
+		allCards.push_back(std::make_pair(card.getRank(), card.getSuit()));
 	}
+	return allCards;
 }
 
 void Hand::resetHand() {
