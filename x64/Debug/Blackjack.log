@@ -1,9 +1,15 @@
 ﻿  MyForm.cpp
-C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(124,62): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(136,78): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „MyForm.cpp”)
+  
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(159,78): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „MyForm.cpp”)
   
   main.cpp
-C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(124,62): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(136,78): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
+  (kompilowanie pliku źródłowego „main.cpp”)
+  
+C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(159,78): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „main.cpp”)
   
   Generowanie kodu...
