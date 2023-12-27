@@ -20,8 +20,8 @@ public:
   BlackjackGame();
   void startGame();
   void playAgain();
-  std::vector<std::pair<char, std::string>> getCardsPlayer();
-  std::vector<std::pair<char, std::string>> getCardsDealer();
+  std::vector<std::pair<char, std::string>> getCards(bool isPlayer);
+  int getPoints(bool isPlayer);
 };
 
 #endif

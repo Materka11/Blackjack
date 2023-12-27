@@ -7,15 +7,6 @@ BlackjackGame::BlackjackGame() : deck(), playerHand(deck, false), dealerHand(dec
 void BlackjackGame::startGame() {
     playerHand.getCards();
     dealerHand.getCards();
-
-    /*const int playerPoints = playerHand.getPoints();
-
-    if (playerPoints == 21) {
-        cout << "Gracz wygral" << endl;
-    }
-    else {
-        getChoice();
-    }*/
 }
 
 void BlackjackGame::resetGame() {
@@ -125,10 +116,20 @@ void BlackjackGame::playAgain() {
     }
 }
 
-std::vector<std::pair<char, std::string>> BlackjackGame::getCardsPlayer() {
-    return playerHand.getCards();
+std::vector<std::pair<char, std::string>> BlackjackGame::getCards(bool isPlayer) {
+    if (isPlayer) {
+        return playerHand.getCards();
+    }
+    else {
+        return dealerHand.getCards();
+    }
 }
 
-std::vector<std::pair<char, std::string>> BlackjackGame::getCardsDealer() {
-    return dealerHand.getCards();
+int BlackjackGame::getPoints(bool isPlayer) {
+    if (isPlayer) {
+        return playerHand.getPoints();
+    }
+    else {
+        return dealerHand.getPoints();
+    }
 }
