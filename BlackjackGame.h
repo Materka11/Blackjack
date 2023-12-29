@@ -4,22 +4,25 @@
 #include "Deck.h"
 #include "Hand.h"
 
+enum GameResult {
+    PLAYER,
+    DEALER,
+    DRAW
+};
+
 class BlackjackGame
 {
 private:
   Deck deck;
   Hand playerHand;
   Hand dealerHand; 
-  void hit();
-  void stand();
-  void surrender();
-  void getChoice();
-  void resetGame();
 
 public:
+  void hit();
+  GameResult stand();
   BlackjackGame();
   void startGame();
-  void playAgain();
+  void resetGame();
   std::vector<std::pair<char, std::string>> getCards(bool isPlayer);
   int getPoints(bool isPlayer);
 };
