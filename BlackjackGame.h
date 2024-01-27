@@ -15,7 +15,8 @@ class BlackjackGame
 private:
   Deck deck;
   Hand playerHand;
-  Hand dealerHand; 
+  Hand dealerHand;
+  std::string playerName;
 
 public:
   void hit();
@@ -25,6 +26,9 @@ public:
   void resetGame();
   std::vector<std::pair<char, std::string>> getCards(bool isPlayer);
   int getPoints(bool isPlayer);
+  GameResult giveResultHit();
+  void setPlayerName(std::string playerName);
+  std::string getPlayerName();
 };
 
 #endif

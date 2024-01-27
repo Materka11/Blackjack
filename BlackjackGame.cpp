@@ -16,7 +16,6 @@ void BlackjackGame::resetGame() {
     playerHand.addCard();
     playerHand.addCard();
     dealerHand.addCard();
-    startGame();
 }
 
 
@@ -70,4 +69,23 @@ int BlackjackGame::getPoints(bool isPlayer) {
     else {
         return dealerHand.getPoints();
     }
+}
+
+GameResult BlackjackGame::giveResultHit() {
+    const int playerPoints = getPoints(true);
+
+    if (playerPoints == 21) {
+        return PLAYER;
+    }
+    else if (playerPoints > 21) {
+        return DEALER;
+    }
+}
+
+void BlackjackGame::setPlayerName(std::string playerName) {
+    this->playerName = playerName;
+}
+
+std::string BlackjackGame::getPlayerName() {
+    return this->playerName;
 }
