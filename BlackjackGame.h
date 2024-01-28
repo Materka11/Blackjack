@@ -7,7 +7,8 @@
 enum GameResult {
     PLAYER,
     DEALER,
-    DRAW
+    DRAW,
+    NOBODY
 };
 
 class BlackjackGame
@@ -17,6 +18,7 @@ private:
   Hand playerHand;
   Hand dealerHand;
   std::string playerName;
+  int bet;
 
 public:
   void hit();
@@ -29,6 +31,8 @@ public:
   GameResult giveResultHit();
   void setPlayerName(std::string playerName);
   std::string getPlayerName();
+  void setBet(int currentBet);
+  int getBet();
 };
 
 #endif

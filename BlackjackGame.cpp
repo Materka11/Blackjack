@@ -75,10 +75,15 @@ GameResult BlackjackGame::giveResultHit() {
     const int playerPoints = getPoints(true);
 
     if (playerPoints == 21) {
+        setBet(bet * 2);
         return PLAYER;
     }
     else if (playerPoints > 21) {
+        setBet(0);
         return DEALER;
+    }
+    else {
+        return NOBODY;
     }
 }
 
@@ -88,4 +93,12 @@ void BlackjackGame::setPlayerName(std::string playerName) {
 
 std::string BlackjackGame::getPlayerName() {
     return this->playerName;
+}
+
+void BlackjackGame::setBet(int currentBet) {
+    this->bet = currentBet;
+}
+
+int BlackjackGame::getBet() {
+    return this->bet;
 }
