@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio\2022\community\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="17.0">
+ <Targets>
+  <Target Name="C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe">
+   <Modules>
+    <Module Name="blackjack.exe">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016" Status="Active" Created="2024-02-05 15:28:49Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Dodaj atrybut AssemblyVersion do elementu 'Blackjack.exe'.</Issue>
+      </Message>
+     </Messages>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="MarkAssembliesWithAssemblyVersion" Category="Microsoft.Design" CheckId="CA1016">
+   <Name>Oznacz zestawy atrybutem AssemblyVersion</Name>
+   <Description>Zestawy powinny używać numerów wersji. Numer wersji jest uznawany za część tożsamości zestawu. Za pomocą atrybutu AssemblyVersion jest realizowana kontrola wersji.</Description>
+   <Resolution Name="Default">Dodaj atrybut AssemblyVersion do elementu {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182155.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="17.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Kategoria</String>
+  <String Key="Certainty">Pewność</String>
+  <String Key="CollapseAll">Zwiń wszystko</String>
+  <String Key="CheckId">Identyfikator testu</String>
+  <String Key="Error">Błąd</String>
+  <String Key="Errors">błędy</String>
+  <String Key="ExpandAll">Rozwiń wszystko</String>
+  <String Key="Help">Pomoc</String>
+  <String Key="Line">Wiersz</String>
+  <String Key="Messages">komunikaty</String>
+  <String Key="LocationNotStoredInPdb">[Lokalizacja nie jest przechowywana w pliku PDB]</String>
+  <String Key="Project">Projekt</String>
+  <String Key="Resolution">Rozwiązanie</String>
+  <String Key="Rule">Reguła</String>
+  <String Key="RuleFile">Plik reguł</String>
+  <String Key="RuleDescription">Opis reguły</String>
+  <String Key="Source">Źródło</String>
+  <String Key="Status">Stan</String>
+  <String Key="Target">Element docelowy</String>
+  <String Key="Warning">Ostrzeżenie</String>
+  <String Key="Warnings">ostrzeżenia</String>
+  <String Key="ReportTitle">Raport rozszerzenia Code Analysis</String>
+ </Localized>
+</FxCopReport>

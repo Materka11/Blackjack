@@ -2,3 +2,6 @@ C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.vcxproj.AssemblyRefe
 C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe
 C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.MyForm.resources
 C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.vcxproj.GenerateResource.cache
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe.lastcodeanalysissucceeded
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\NativeCodeAnalysis.read.1.tlog
+C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe.CodeAnalysisLog.xml

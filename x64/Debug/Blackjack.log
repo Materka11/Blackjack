@@ -1,4 +1,8 @@
-﻿  MyForm.cpp
+﻿  BlackjackGame.cpp
+  Card.cpp
+  Deck.cpp
+  Hand.cpp
+  MyForm.cpp
 C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(123,73): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „MyForm.cpp”)
   
@@ -6,6 +10,13 @@ C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(123,73): warning C4267: "argume
 C:\Users\Home\Desktop\Zadania\Blackjack\MyForm.h(123,73): warning C4267: "argument": konwersja z "size_t" do "int", możliwa utrata danych
   (kompilowanie pliku źródłowego „main.cpp”)
   
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Uruchamianie rozszerzenia Code Analysis dla języka C/C++...
   Generowanie kodu...
+C:\Users\Home\Desktop\Zadania\Blackjack\Card.cpp(27): warning C4715: "Card::getValue”: niewszystkie ścieżki kodu zwracają wartość
+C:\Users\Home\Desktop\Zadania\Blackjack\BlackjackGame.cpp(54): warning C4715: "BlackjackGame::stand”: niewszystkie ścieżki kodu zwracają wartość
   BlackjackGame.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
   Blackjack.vcxproj -> C:\Users\Home\Desktop\Zadania\Blackjack\x64\Debug\Blackjack.exe
+  Running Code Analysis...
+MSBUILD : warning CA1016: Microsoft.Design : Dodaj atrybut AssemblyVersion do elementu 'Blackjack.exe'.
+  Code Analysis Complete -- 0 error(s), 1 warning(s)

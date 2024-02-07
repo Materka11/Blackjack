@@ -1,0 +1,67 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33133.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/home/desktop/zadania/blackjack/blackjackgame.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "ad8c39f2896beeb38d2e70d4de8d39f3f8c0e4da176ba90ee3b6104182ba180a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/home/desktop/zadania/blackjack/blackjackgame.h"
+          },
+          "hashes": {
+            "sha-256": "3c13d5f6f2b9071891b30428da0f8769cdf4b1b98b3b419a7a6836e005e98690"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/home/desktop/zadania/blackjack/deck.h"
+          },
+          "hashes": {
+            "sha-256": "b7e04fd1c3c53f0bd9c954ab656e102b3116c27e66754238942de375f0632fa4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/home/desktop/zadania/blackjack/card.h"
+          },
+          "hashes": {
+            "sha-256": "e37a9d7e8b8aa6d08674bcbce996cee8e15c81a1ddcfc9a26daa8081a217fe0d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/home/desktop/zadania/blackjack/hand.h"
+          },
+          "hashes": {
+            "sha-256": "76f230d53c5caece46ae02106a5846be061ce918979a94c46d6cab9b80107b74"
+          }
+        }
+      ]
+    }
+  ]
+}
